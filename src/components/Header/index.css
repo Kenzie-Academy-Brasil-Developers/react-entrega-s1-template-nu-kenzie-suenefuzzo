@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+
+  width: 100vw;
+  height: 4.313rem;
+
+  width: 100%;
+
+  padding: 16px 19px;
+
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.toHomeButton{
+    height: 2.5rem;
+
+    background-color: var(--color-grey-2);
+    border: none;
+    border-radius: var(--radius-default);
+
+    padding: 10.5px 15px;
+
+    cursor: pointer;
+}
+
+.toHomeButton:hover{
+    background-color: var(--color-grey-3);
+    color: var(--color-white);
+}
