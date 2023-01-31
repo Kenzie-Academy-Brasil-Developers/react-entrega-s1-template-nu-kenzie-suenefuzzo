@@ -16,7 +16,10 @@ export const Dashboard = () => {
     setList([...list, newCard])
   }
 
-  // const removeFromList = ()
+  const removeFromList = (cardId) => {
+    const newList = list.filter((card) => card.id !== cardId)
+    setList(newList)
+  }
 
   return (
     <div>
@@ -27,7 +30,7 @@ export const Dashboard = () => {
             <Form addCardToList={addCardToList} />
             <TotalMoney />
           </section>
-          <List list={list} />
+          <List list={list} removeFromList={removeFromList} />
         </div>
       </main>
     </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import "../Card/index.css";
 
-export const Card = ({card}) => {
+export const Card = ({card, removeFromList}) => {
 
 
   return (
@@ -15,7 +15,7 @@ export const Card = ({card}) => {
       </div>
       <div className="container__typeAndButton">
         <span>{card.type}</span>
-        <button className="deleteButton"></button>
+        <button onClick={() => removeFromList(card.id)} className="deleteButton"></button>
       </div>
     </li>
   );
