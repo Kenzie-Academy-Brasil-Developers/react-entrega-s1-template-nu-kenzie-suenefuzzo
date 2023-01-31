@@ -1,7 +1,7 @@
 import React from "react";
-import '../Header/index.css'
+import "../Header/index.css";
 
-export const Header = () => {
+export const Header = ({setLogin}) => {
   return (
     <header className="header">
       <div className="container__header">
@@ -9,7 +9,7 @@ export const Header = () => {
           <img src="./NuKenzieLogo.svg" alt="Logo" />
         </div>
         <div>
-          <button className="toHomeButton" type="button">Início</button>
+          <button onClick={() => setLogin(false)} className="toHomeButton" type="button">Início</button>
         </div>
       </div>
     </header>

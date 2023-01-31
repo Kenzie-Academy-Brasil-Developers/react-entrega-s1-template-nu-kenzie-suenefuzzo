@@ -1,9 +1,7 @@
-// import { useState } from "react";
 import React from "react";
 import "../Card/index.css";
 
 export const Card = ({card, removeFromList}) => {
-
 
   return (
     <li className={

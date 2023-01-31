@@ -11,7 +11,7 @@ export const App = () => {
   return (
     <div className="App">
       {
-      login ? <Dashboard /> : <Homepage setLogin={setLogin} />
+      login ? <Dashboard setLogin={setLogin} /> : <Homepage setLogin={setLogin} />
       }
     </div>
   );
