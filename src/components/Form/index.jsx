@@ -6,7 +6,7 @@ export const Form = ({ addCardToList }) => {
   const [listTransactions, setListTransactions] = useState({
     description: "",
     value: "",
-    type: "entrada",
+    type: "entrada"
   });
 
   const submit = (event) => {
@@ -16,6 +16,12 @@ export const Form = ({ addCardToList }) => {
     } else {
       alert("Por favor, preencha os campos");
     }
+
+    setListTransactions({
+      description: "",
+      value: "",
+      type: "entrada"
+    })
   };
 
   return (
@@ -24,6 +30,7 @@ export const Form = ({ addCardToList }) => {
         <fieldset className="container__descriptionInput">
           <label className="title">Descrição</label>
           <input
+            value={listTransactions.description}
             onChange={(event) =>
               setListTransactions({
                 ...listTransactions,
@@ -42,6 +49,7 @@ export const Form = ({ addCardToList }) => {
               Valor
             </label>
             <input
+            value={listTransactions.value}
               onChange={(event) =>
                 setListTransactions({
                   ...listTransactions,
@@ -58,6 +66,7 @@ export const Form = ({ addCardToList }) => {
               Tipo de valor
             </label>
             <select
+            value={listTransactions.type}
               onChange={(event) =>
                 setListTransactions({
                   ...listTransactions,
