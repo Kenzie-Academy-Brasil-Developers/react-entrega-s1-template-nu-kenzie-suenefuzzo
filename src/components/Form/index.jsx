@@ -1,14 +1,18 @@
-import { useState } from "react";
 import React from "react";
+import { useState } from "react";
+import {TotalMoney} from "../TotalMoney"
 import "../Form/index.css";
 
-export const Form = ({ addCardToList }) => {
-  const [listTransactions, setListTransactions] = useState({
-    description: "",
-    value: "",
-    type: "entrada"
-  });
+export const Form = ({ addCardToList, list}) => {
+  const [listTransactions, setListTransactions] = useState(
+    {
+      description: "",
+      value: "",
+      type: "entrada",
+    },
+  );
 
+  
   const submit = (event) => {
     event.preventDefault();
     if (listTransactions.description !== "" && listTransactions.value !== "") {
@@ -25,6 +29,7 @@ export const Form = ({ addCardToList }) => {
   };
 
   return (
+    <>
     <div className="container__form">
       <form onSubmit={submit} className="form" noValidate>
         <fieldset className="container__descriptionInput">
@@ -58,7 +63,7 @@ export const Form = ({ addCardToList }) => {
               }
               className="generalInput"
               type="number"
-              placeholder="1"
+              placeholder="0 R$"
             />
           </fieldset>
           <fieldset className="container__select">
@@ -85,5 +90,9 @@ export const Form = ({ addCardToList }) => {
         </button>
       </form>
     </div>
+    <TotalMoney list={list}/>
+
+    </>
+    
   );
 };
