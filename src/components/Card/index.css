@@ -5,10 +5,19 @@
 
     background-color: var(--color-grey-1);
 
-    border-left: 2px solid var(--color-secondary);
     border-radius: var(--radius-2);
 
     padding: 16px 14px;
+
+    margin-bottom: 20px;
+}
+
+.cardEntrada{
+    border-left: 2px solid var(--color-secondary);
+}
+
+.cardSaida{
+    border-left: 2px solid var(--color-grey-2);
 }
 
 .container__descriptionAndAmount, .container__typeAndButton{

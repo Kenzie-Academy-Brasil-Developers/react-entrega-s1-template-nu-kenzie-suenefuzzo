@@ -1,15 +1,20 @@
+// import { useState } from "react";
 import React from "react";
 import "../Card/index.css";
 
-export const Card = () => {
+export const Card = ({card}) => {
+
+
   return (
-    <li className="card">
+    <li className={
+      card.type === "entrada" ? "cardEntrada card" : "cardSaida card"
+    }>
       <div className="container__descriptionAndAmount">
-        <h3>Salário - Dezembro</h3>
-        <p>R$ 6.600</p>
+        <h3>{card.description}</h3>
+        <p>{card.value}</p> 
       </div>
       <div className="container__typeAndButton">
-        <span>Entrada</span>
+        <span>{card.type}</span>
         <button className="deleteButton"></button>
       </div>
     </li>

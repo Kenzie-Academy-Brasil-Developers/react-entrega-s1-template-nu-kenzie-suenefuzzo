@@ -7,10 +7,11 @@ import '../src/App.css'
 
 export const App = () => {
   const [login, setLogin] = useState(false)
+
   return (
     <div className="App">
       {
-      login ? <Dashboard/> : <Homepage setLogin={setLogin}/>
+      login ? <Dashboard /> : <Homepage setLogin={setLogin} />
       }
     </div>
   );

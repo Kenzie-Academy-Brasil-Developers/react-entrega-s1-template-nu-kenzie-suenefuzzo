@@ -4,11 +4,19 @@ import { Header } from "../../components/Header";
 import { Form } from "../../components/Form";
 import { TotalMoney } from "../../components/TotalMoney";
 import { List } from "../../components/List";
-import { Card } from "../../components/Card";
 import "../Dashboard/index.css";
+import { v4 as uuidv4 } from 'uuid';
 
 export const Dashboard = () => {
-  const [list, setList] = useState({ })
+  const [list, setList] = useState([])
+
+  const addCardToList = (card) => {
+    const newCard = {...card, id: uuidv4()}
+    console.log(newCard)
+    setList([...list, newCard])
+  }
+
+  // const removeFromList = ()
 
   return (
     <div>
@@ -16,12 +24,11 @@ export const Dashboard = () => {
       <main className="main">
         <div>
           <section>
-            <Form />
+            <Form addCardToList={addCardToList} />
             <TotalMoney />
           </section>
-          <List />
+          <List list={list} />
         </div>
-        <Card />
       </main>
     </div>
   );
