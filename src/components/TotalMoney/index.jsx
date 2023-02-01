@@ -5,8 +5,11 @@ export const TotalMoney = ({ list }) => {
   const transaction = list.reduce(
     (total, card) =>
       card.type === "saida"
-        ? total - Number(card.value) : total + Number(card.value), 0);
-  
+        ? total - Number(card.value)
+        : total + Number(card.value),
+    0
+  );
+
   return (
     <div className="container__totalValue">
       <div className="totalValue">

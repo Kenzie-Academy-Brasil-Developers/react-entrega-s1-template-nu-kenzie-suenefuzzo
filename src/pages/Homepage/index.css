@@ -81,13 +81,13 @@
     }
 
     .container{
-        max-width: 62.375rem;
+        /* max-width: 62.375rem; */
+        flex-direction: row;
     }
 }
 
 @media (min-width: 1024px){
     .container{
-        flex-direction: row;
         gap: 48px;
     }
 
@@ -96,6 +96,6 @@
     }
 
     .container__image{
-        width: 59%;
+        max-width: 59%;
     }
 }
