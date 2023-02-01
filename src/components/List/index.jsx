@@ -1,4 +1,3 @@
-// import { useState } from "react"
 import React from "react"
 import "../List/index.css"
 import { Card } from "../Card/index"

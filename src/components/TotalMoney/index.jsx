@@ -1,16 +1,12 @@
 import React from "react";
-// import { useState } from "react"
 import "../TotalMoney/index.css";
 
 export const TotalMoney = ({ list }) => {
   const transaction = list.reduce(
-    (totalMoney, card) =>
+    (total, card) =>
       card.type === "saida"
-        ? totalMoney - Number(card.value)
-        : totalMoney + Number(card.value),
-    0
-  );
-
+        ? total - Number(card.value) : total + Number(card.value), 0);
+  
   return (
     <div className="container__totalValue">
       <div className="totalValue">

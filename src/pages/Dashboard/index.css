@@ -3,3 +3,16 @@
 
     margin: 1.5rem 0.938rem 0rem 0.938rem;
 }
+
+@media (min-width: 1024px){
+    .main{
+        max-width: 1000px;
+
+        margin: 39px auto;
+    }
+
+    .container__main{
+        display: flex;
+        gap: 59px;
+    }
+}

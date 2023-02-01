@@ -9,7 +9,6 @@
   padding: 16px 19px;
 
   box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
-
 }
 
 .container__header {
@@ -20,19 +19,26 @@
   width: 100%;
 }
 
-.toHomeButton{
-    height: 2.5rem;
+.toHomeButton {
+  height: 2.5rem;
 
-    background-color: var(--color-grey-2);
-    border: none;
-    border-radius: var(--radius-default);
+  background-color: var(--color-grey-2);
+  border: none;
+  border-radius: var(--radius-default);
 
-    padding: 10.5px 15px;
+  padding: 10.5px 15px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.toHomeButton:hover{
-    background-color: var(--color-grey-3);
-    color: var(--color-white);
+.toHomeButton:hover {
+  background-color: var(--color-grey-3);
+  color: var(--color-white);
+}
+
+@media (min-width: 1024px) {
+  .container__header {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
